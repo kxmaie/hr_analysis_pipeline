@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_clean_table
+    description: "to check the data in the table"
+    tests:
+      - not_null:
+           column_name: Department
+      - not_null:
+           column_name: Job_Title
+  - name: fact_salary
+    description: "to check the data in the column"
+    tests:
+      - not_null: 
+           column_name: Salary_INR
+      - not_null:
+           column_name: Experience_Years
+           
+    
